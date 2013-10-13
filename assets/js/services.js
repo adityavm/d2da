@@ -35,7 +35,6 @@
 	}
 
 	var object = {};
-		object.timestamp = +new Date();
 		object.promise = (function(){
 			var promise = $q.defer();
 

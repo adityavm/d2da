@@ -41,7 +41,7 @@
 				element.css('height', Math.max($shadow[0].offsetHeight + 10 /* the "threshold" */, minHeight) + 'px');
 			}
 	 
-			element.bind('keyup keydown keypress change', update);
+			element.bind('keyup keydown keypress change', function(){ update(); });
 
 			// call it
 			ngModel.$formatters.push(function(value){
@@ -69,9 +69,7 @@
 		restrict: "A",
 		controller: ["$scope", "$http", "object", "heroes", function($scope, $http, object, heroes){
 			object.promise.then(function(data){
-				console.log(object.data, object);
-				$scope.match = object.data;
-				$scope.object = object;
+				$scope.data = data;
 			})
 
 			$scope.assets = {
@@ -81,8 +79,8 @@
 			$scope.save = function(){
 				$scope.saving = true;
 
-				var key = makeOKVKey($scope.object),
-					val = angular.copy($scope.object);
+				var key = makeOKVKey(),
+					val = angular.copy($scope.data);
 
 				$http({
 					url: "./api/post.php",

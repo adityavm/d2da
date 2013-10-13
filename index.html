@@ -17,18 +17,18 @@
 </head>
 <body ng-app="dda" picks-bans>
 	<div class="mask" loader><span class="icon-spin"></span></div>
-	<div class="notice" ng-show="match.leagueid == 0">Please make sure the supplied match ID is from a tournament match.</div>
+	<div class="notice" ng-show="data.leagueid == 0">Please make sure the supplied match ID is from a tournament match.</div>
 	<div class="head">
-		<h1>{{match.radiant_name}}<span class="radiant">Radiant</span></h1><h1>{{match.dire_name}}<span class="dire">Dire</span></h1>
+		<h1>{{data.radiant_name}}<span class="radiant">Radiant</span></h1><h1>{{data.dire_name}}<span class="dire">Dire</span></h1>
 	</div>
 	<div class="picksbans">
-		<div ng-repeat="pb in match.picks_bans" class="pb" ng-class="{pick: pb.is_pick, radiant: !pb.team, dire: pb.team}">
+		<div ng-repeat="pb in data.picks_bans" class="pb" ng-class="{pick: pb.is_pick, radiant: !pb.team, dire: pb.team}">
 			<img ng-src="assets/images/mini/{{assets.heroes[pb.hero_id]}}.png" alt="{{assets.heroes[pb.hero_id]}}" width="32" height="32">
 			<br>
 			<textarea class="info" ng-model="pb.info" auto-grow></textarea>
 		</div>
 	</div>
-	<div class="controls" ng-show="match.leagueid > 0">
+	<div class="controls" ng-show="data.leagueid > 0">
 		<button ng-click="save()" ng-class="{spin: saving}"><span>Save</span></button>
 		<span class="msg" ng-show="showSaveMsg">The URL has been updated. You can share the current URL with your friends to share your analysis of this draft.</span>
 	</div>

@@ -5,4 +5,4 @@ A simple tool to help analyse a tournament game's draft by allowing one to write
 
 Example: [Team Empire vs. Na'Vi, Starladder LAN Finals, Loser's Bracket Finals, Game 1][1]
 
-[1]: http://code.adityamukherjee.com/d2da/?key=rok-6eb7af3d3617c2a44121b09c5a8dba7996b75af9
+[1]: http://code.adityamukherjee.com/d2da/?key=rok-8346e8696b988c1536e14d946b0e24a07a8e592e
