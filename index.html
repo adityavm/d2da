@@ -1,0 +1,36 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<script src="http://cdn.openkeyval.org/statics/openkeyval.packed.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js" type="text/javascript"></script>
+	<script type="text/javascript">angular.module("dda",[]);</script>
+	<script src="assets/js/services.js" type="text/javascript"></script>
+	<script src="assets/js/app.js" type="text/javascript"></script>
+	<script src="assets/js/functions.js" type="text/javascript"></script>
+
+	<link href="assets/style/app.css" type="text/css" rel="stylesheet">
+	<link href="assets/style/anim.css" type="text/css" rel="stylesheet">
+	<link href="https://s3.amazonaws.com/attsite/glyphs/style.css" type="text/css" rel="stylesheet">
+
+	<script type="text/javascript" src="//use.typekit.net/sfi4zid.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body ng-app="dda" picks-bans>
+	<div class="mask" loader><span class="icon-spin"></span></div>
+	<div class="notice" ng-show="match.leagueid == 0">Please make sure the supplied match ID is from a tournament match.</div>
+	<div class="head">
+		<h1>{{match.radiant_name}}<span class="radiant">Radiant</span></h1><h1>{{match.dire_name}}<span class="dire">Dire</span></h1>
+	</div>
+	<div class="picksbans">
+		<div ng-repeat="pb in match.picks_bans" class="pb" ng-class="{pick: pb.is_pick, radiant: !pb.team, dire: pb.team}">
+			<img ng-src="assets/images/mini/{{assets.heroes[pb.hero_id]}}.png" alt="{{assets.heroes[pb.hero_id]}}" width="32" height="32">
+			<br>
+			<textarea class="info" ng-model="pb.info" auto-grow></textarea>
+		</div>
+	</div>
+	<div class="controls" ng-show="match.leagueid > 0">
+		<button ng-click="save()" ng-class="{spin: saving}"><span>Save</span></button>
+		<span class="msg" ng-show="showSaveMsg">The URL has been updated. You can share the current URL with your friends to share your analysis of this draft.</span>
+	</div>
+</body>
+</html>

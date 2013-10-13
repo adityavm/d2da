@@ -1,0 +1,185 @@
+.clear:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "hypatia-sans-pro", sans-serif;
+  background-color: #111;
+}
+.icon-spin {
+  -webkit-animation: spin 0.4s linear 0s infinite;
+  animation: spin 0.4s linear 0s infinite;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  z-index: 1;
+}
+.mask .icon-spin {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.mask.hide {
+  display: none;
+}
+.notice {
+  background-color: #222;
+  color: #fff;
+  margin: 10px auto;
+  padding: 10px;
+  width: 500px;
+}
+.head {
+  width: 800px;
+  margin: 20px auto 30px;
+}
+.head h1 {
+  width: 400px;
+  float: left;
+  color: #fff;
+  text-align: center;
+}
+.head h1 span {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+}
+.head h1 span.radiant {
+  color: #9abc2c;
+}
+.head h1 span.dire {
+  color: #9c3425;
+}
+.head:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.picksbans .pb {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.picksbans .pb.dire {
+  position: relative;
+  left: 185px;
+}
+.picksbans .pb.dire img {
+  float: left;
+  margin-right: 38px;
+}
+.picksbans .pb.dire .info {
+  width: 330px;
+  float: left;
+}
+.picksbans .pb.radiant {
+  position: relative;
+  right: 185px;
+}
+.picksbans .pb.radiant img {
+  float: right;
+}
+.picksbans .pb.radiant .info {
+  margin-left: 30px;
+  float: left;
+  text-align: right;
+}
+.picksbans .pb .info {
+  width: 300px;
+  height: 50px;
+  margin-top: -25px;
+  font: 300 15px/1.4em "hypatia-sans-pro", sans-serif;
+  border-width: 0;
+  background-color: transparent;
+  color: #fff;
+}
+.picksbans .pb:hover {
+  background-color: #222;
+}
+.picksbans .pb.pick {
+  background-color: #27AE60;
+}
+.picksbans .pb.pick:hover {
+  background-color: #2cc36b;
+}
+.picksbans .pb:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.controls {
+  text-align: center;
+  margin: 30px auto 0;
+  padding: 20px 0;
+  width: 600px;
+}
+.controls .msg {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1em;
+  display: inline-block;
+  text-align: left;
+  width: 350px;
+  position: relative;
+  top: 5px;
+  left: 20px;
+  color: #fff;
+}
+button {
+  background-color: #9c3425;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 0;
+  width: 80px;
+  text-align: center;
+  font-weight: 300;
+  border: 0;
+  font: 20px "freight-sans-pro", sans-serif;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+button.spin {
+  border-radius: 100%;
+  width: 27px;
+  height: 27px;
+  padding: 0;
+  border: 0;
+  border-top: 2px solid #9c3425;
+  background-color: transparent;
+  -webkit-transition: width 0.1s ease-out;
+  transition: width 0.1s ease-out;
+  -webkit-animation: spin 0.35s linear 0.05s infinite;
+  animation: spin 0.35s linear 0.05s infinite;
+}
+button.spin span {
+  display: none;
+}
+button.spin:hover {
+  background-color: transparent;
+}
+button:hover {
+  background-color: #b13b2a;
+}
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 0;
+}
