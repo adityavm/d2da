@@ -70,7 +70,7 @@ body {
   clear: both;
 }
 .picksbans .pb {
-  width: 400px;
+  width: 360px;
   margin: 0 auto;
   padding: 10px;
   -webkit-transition-duration: 0.3s;
@@ -78,25 +78,25 @@ body {
 }
 .picksbans .pb.dire {
   position: relative;
-  left: 185px;
+  left: 164px;
 }
 .picksbans .pb.dire img {
   float: left;
-  margin-right: 38px;
+  margin-right: 18px;
 }
 .picksbans .pb.dire .info {
-  width: 330px;
+  width: 300px;
   float: left;
 }
 .picksbans .pb.radiant {
   position: relative;
-  right: 185px;
+  right: 164px;
 }
 .picksbans .pb.radiant img {
   float: right;
 }
 .picksbans .pb.radiant .info {
-  margin-left: 30px;
+  margin-left: 10px;
   float: left;
   text-align: right;
 }
@@ -113,10 +113,10 @@ body {
   background-color: #222;
 }
 .picksbans .pb.pick {
-  background-color: #27AE60;
+  background-color: #145b32;
 }
 .picksbans .pb.pick:hover {
-  background-color: #2cc36b;
+  background-color: #19703e;
 }
 .picksbans .pb:after {
   content: " ";
